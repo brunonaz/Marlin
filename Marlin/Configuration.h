@@ -123,8 +123,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-//#define BAUDRATE 250000
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -351,12 +350,12 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 235 //275 bruno
+#define HEATER_0_MAXTEMP 235 
 #define HEATER_1_MAXTEMP 235
 #define HEATER_2_MAXTEMP 235
 #define HEATER_3_MAXTEMP 235
 #define HEATER_4_MAXTEMP 235
-#define BED_MAXTEMP 110 //150 bruno
+#define BED_MAXTEMP 110 
 
 //===========================================================================
 //============================= PID Settings ================================
@@ -612,7 +611,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 90 } //original Bruno 3 Jumpers Microstep 16 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 90 } // 3 Jumpers Microstep 16 
 // (--, ||, zz, Extrusor )
 
 /**
@@ -639,7 +638,7 @@
  */
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1300    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -885,10 +884,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 190 //220
-#define Y_BED_SIZE 180 //220
-// X 190 o que foi possivel movimentar no eixo
-// Y 180 bruno
+#define X_BED_SIZE 190 //o que foi possivel movimentar nos eixos
+#define Y_BED_SIZE 180 
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -896,7 +893,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 155 //155
+#define Z_MAX_POS 155 
 
 /**
  * Software Endstops
@@ -1539,8 +1536,8 @@
 //
 // Note: Usually sold with a white PCB.
 //
-#define REPRAP_DISCOUNT_SMART_CONTROLLER
-
+//#define REPRAP_DISCOUNT_SMART_CONTROLLER
+//tcic
 //
 // ULTIMAKER Controller.
 //
@@ -1761,7 +1758,7 @@
 // ANET and Tronxy Graphical Controller
 //
 //tcic lcd
-//#define ANET_FULL_GRAPHICS_LCD  // Anet 128x64 full graphics lcd with rotary encoder as used on Anet A6
+#define ANET_FULL_GRAPHICS_LCD  // Anet 128x64 full graphics lcd with rotary encoder as used on Anet A6
                                   // A clone of the RepRapDiscount full graphics display but with
                                   // different pins/wiring (see pins_ANET_10.h).
 
